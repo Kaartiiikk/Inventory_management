@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+:root {
+  --primary: #3b82f6;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --border-color: #e5e7eb;
+  --bg-light: #f9fafb;
+    
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+nav a:hover {
+  border-bottom-color: var(--primary);
+}
+
+/* Container */
+.container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  width: 100%;
+}
+
+/* Forms & Sections */
+form {
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--bg-light);
+  border-bottom: 2px solid var(--border-color);
+}
+
+th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background-color: var(--bg-light);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Page Section */
+.page-section {
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.page-section h2 {
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-light);
+}
+
+.empty-state h3 {
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.empty-state p {
+  font-size: 14px;
+}
+
+/* Form Row */
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 12px 16px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    padding: 16px 12px;
+  }
+
+  form {
+    padding: 16px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 8px 12px;
+  }
+}

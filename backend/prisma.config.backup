@@ -1,0 +1,13 @@
+import { PrismaConfig } from '@prisma/client';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const config: PrismaConfig = {
+  datasource: {
+    provider: 'postgresql',
+    url: process.env.DATABASE_URL,
+  },
+};
+
+export default config;
